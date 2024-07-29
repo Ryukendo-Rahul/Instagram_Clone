@@ -12,15 +12,15 @@
         width: 100%;
         height: 100%;
         background: white;
-
+        overflow-y: auto;
     }
 
     .navbar {
+        /* border: 2px solid black; */
         position: relative;
         display: flex;
         justify-content: space-between;
-        margin-left: 1vh;
-        /* border: 2px solid black; */
+        margin-left:0vw;
         width: 100%;
         height: 5.5vh;
 
@@ -34,10 +34,7 @@
     .navresponse {
         /* border: 2px solid yellow; */
         width: 52vw;
-        flex-direction: column;
-        justify-content: center;
-        /* display: none; */
-        align-items: flex-start;
+       
 
     }
     
@@ -45,20 +42,25 @@
         
         background-color: white;
         /* border: 2px solid black; */
-        width: 99vw;
-        height: 5vh;
+        width: 100%;
+        height: 6vh;
+        bottom: 0;
         display: flex;
         justify-content:space-around;
         align-items: center;
         position: fixed;
-        top: 93%;
         z-index: 1;
-        right: 2vw;
+        /* right: .2rem; */
     }
-
+    .bottom_navlist  img{
+        /* border: 2px solid yellow; */
+        height: 1.7rem !important;
+        width: 1.7rem !important;
+    }
     
     .instalike{
         display: block;
+
       }
     .insta_add{
         display: block;
@@ -148,6 +150,7 @@
 
 
     .profile-pic img {
+        border: 2px solid black;
         margin-left: 1px;
         margin-top: -5px;
         width: 85%;
