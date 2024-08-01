@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta_reels</title>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* background-color: black; */
+        }
+        .container {
+        
+            /* border: 2px solid black; */
+            width: 100vw;
+            height:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container video{
+            margin: 1rem 0rem;
+            height: 95vh;
+            width: 99vw;
+        }
+        .lastreel{
+        padding-bottom: 3rem ;
+        }
+
+
+        .bottom_navlist {
+
+            background-color: white;
+            
+            width: 100%;
+            height: 6vh;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            z-index: 1;
+            list-style: none;
+        }
+
+        .bottom_navlist img {
+            height: 1.7rem !important;
+            width: 1.7rem !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <video  height="722"  controls loop muted>
+            <source src="reel1.mp4" type="video/mp4">
+        </video>
+        <video  height="722"  controls loop muted>
+            <source src="reel2.mp4" type="video/mp4">
+        </video>
+        <video  height="722"  controls loop muted>
+            <source src="reel3.mp4" type="video/mp4">
+        </video>
+        <video  height="722"  controls loop muted>
+            <source src="reel4.mp4" type="video/mp4">
+        </video>
+        <video  height="722"  controls loop muted>
+            <source src="reel0.mp4" type="video/mp4">
+        </video>
+        <video  height="722"  controls loop muted>
+            <source src="reel5.mp4" type="video/mp4">
+        </video>
+        <video  height="722"  controls loop muted>
+            <source src="reel11.mp4" type="video/mp4">
+        </video>
+        <video  height="722"  controls loop muted>
+            <source src="reel10.mp4" type="video/mp4">
+        </video>
+        <video class="lastreel" height="722"  controls loop muted>
+            <source src="reel6.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <div class="bottom_navlist">
+        <li><img class="homePage" src="home (1).PNG" alt=""></li>
+        <li><img src="search.png" alt=""></li>
+        <li><img class="openReel" src="reel.jpg " alt=""></li>
+        <li><img src="messenger (1).PNG" alt=""></li>
+        <li><img class="profilephoto" src="logoiinsta.png" alt=""></li>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
