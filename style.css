@@ -242,6 +242,9 @@ body {
   font-weight: bold;
 }
 .description {
+  /* border: 2px solid black; */
+  /* height: 2rem; */
+  overflow: scroll;
   margin: 5px 3px;
   line-height: 20px;
   font-size: 14px;

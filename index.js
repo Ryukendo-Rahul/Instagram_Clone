@@ -2,6 +2,7 @@ const profilePhotos = document.getElementsByClassName('profilephoto');
 const goHome = document.getElementsByClassName('homePage');
 const openReels = document.getElementsByClassName('openReel');
 const opentheSearch = document.getElementsByClassName('openSearch');
+const opentheMessage = document.getElementsByClassName('openMessage');
 
 
 // Iterate over the collection and add event listener to each element
@@ -15,6 +16,11 @@ for (let i = 0; i < profilePhotos.length; i++) {
 function openProfilePage() {
   location.href = 'profile.html';
 }
+
+
+
+
+
 for (let i = 0; i < opentheSearch.length; i++) {
   opentheSearch[i].addEventListener('click', function(event) {
     event.preventDefault();
@@ -51,4 +57,17 @@ for (let i = 0; i < goHome.length; i++) {
 
 function openHomePage() {
   location.href='index.html';
+}
+
+
+
+for (let i = 0; i < opentheMessage.length; i++) {
+  opentheMessage[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    openMsgPage();
+  });
+}
+
+function openMsgPage() {
+  location.href='message.html';
 }
