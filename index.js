@@ -71,3 +71,52 @@ for (let i = 0; i < opentheMessage.length; i++) {
 function openMsgPage() {
   location.href='message.html';
 }
+
+
+//posts likes 
+// Get all post-image and post-video elements
+const postImages = document.querySelectorAll('.post-image');
+const postVideos = document.querySelectorAll('.post-image[autoplay]');
+
+// Function to like a post
+let touchCount = 0;
+
+function likePost(event) {
+  // Get the heart icon element
+  const heartIcon = event.target.parentNode.querySelector('.icon');
+
+  // Check if the heart icon is already liked
+  if (event.type === 'dblclick') {
+    if (heartIcon.src.includes('like.PNG')) {
+      // If liked, change the heart icon to red
+      heartIcon.src = 'like_red.PNG'; // Replace 'like_red.PNG' with the actual path to the red heart icon
+    } else {
+      // If not liked, change the heart icon back to normal
+      heartIcon.src = 'like.PNG';
+    }
+  } else if (event.type === 'touchstart') {
+    touchCount++;
+    if (touchCount === 2) {
+      if (heartIcon.src.includes('like.PNG')) {
+        // If liked, change the heart icon to red
+        heartIcon.src = 'like_red.PNG'; // Replace 'like_red.PNG' with the actual path to the red heart icon
+      } else {
+        // If not liked, change the heart icon back to normal
+        heartIcon.src = 'like.PNG';
+      }
+      touchCount = 0;
+    }
+  }
+}
+
+// Add event listener to post-images and post-videos
+postImages.forEach((image) => {
+  image.addEventListener('dblclick', likePost);
+  image.addEventListener('touchstart', likePost);
+});
+
+postVideos.forEach((video) => {
+  video.addEventListener('dblclick', likePost);
+  video.addEventListener('touchstart', likePost);
+});
+
